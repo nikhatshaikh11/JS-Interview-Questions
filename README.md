@@ -25,10 +25,14 @@ will throw an error (printName is not a function in case of var, not defined in 
 A. JS has two types of data types, namely primitives and non-primitives. Primitive data types can hold a single value at a time. However, if we want to store multiple and more compelx data in a variable, we can use non-primitives, more commonly known as Objects. So Objects in JS are standalone entity which has properties and methods of its own. 
 
 # 4. Create a user object with name and id properties and how to access the value of name property.
-A. var user = {
-      id: 1,
-      name: 'Nikhat'
-   }
+A.
+         var user = {
+            id: 1,
+            name: 'Nikhat'
+         }
+         
+    Accessing the value of the property using the dot operator like this: 
+      user.name
    
 # 5. Create an object with a method inside of it.
 A. To declare methods inside of objects in JS, we need to first create a property with the same name as that of the method and then declare the method. For eg:
