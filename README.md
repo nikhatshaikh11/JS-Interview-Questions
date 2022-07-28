@@ -20,14 +20,14 @@ A. var user = {
 A. To declare methods inside of objects in JS, we need to first create a property with the same name as that of the method and then declare the method. For eg:
       
       function obj(id, name) {
-      this.id = id;
-      this.name = name;
-      
-      this.changeName = changeName;
-      
-      function changeName(newName) {
-        this.name = newName;
-      }
+            this.id = id;
+            this.name = name;
+
+            this.changeName = changeName;
+
+            function changeName(newName) {
+              this.name = newName;
+            }
       }
    
    var obj1 = new obj(1, 'Nikhat');
