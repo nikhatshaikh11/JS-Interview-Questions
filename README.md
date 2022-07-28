@@ -9,7 +9,17 @@ A. IIFE stands for Immediately Invoked Function Expression. As the name suggest,
 The first part is an anonymous function i.e. a function without a name, ecnclosed inside of a pair of parenthesis. Whenever the JS engine sees the word 'funtion' it assumes that we're declaring a function and thus it expects a function name because by the syntax of declaring a function in JS, it has to have a name. And so without these first set of parenthesis, the compiler would throw an error. Thus we add this first set of paremthesis to let the compiler know that its not a function declaration but a function exprssion.
 The second set of parenthesis again make sense because in JS to invoke a function, we have to use parenthesis after it name..so that's what the second set of parethesis is doing..its invoking the function that we just declared.
 
-# What is the difference between a function declaration and a function expression?
+#  What is the difference between a function declaration and a function expression?
+A. The main difference between a function declaraation and a function expression is that the function name can be omitted in case of function expression to create anonymous functions but not in case of declaration.
+We can use function declarations for eg in the global scope and make it available throughout the code. If we dont want that, if we for eg want to limit the availablity of the function, we can use function expresson.
+Another difference is that function declarations are hoisted while function expressions are not.
+so for eg: printName()
+function printName ( ) { }
+will not throw any error
+but
+printName()
+const printName = () => {}
+will throw an error (printName is not a function in case of var, not defined in case of let and const)
 
 # 3. What is an Object is JS?
 A. JS has two types of data types, namely primitives and non-primitives. Primitive data types can hold a single value at a time. However, if we want to store multiple and more compelx data in a variable, we can use non-primitives, more commonly known as Objects. So Objects in JS are standalone entity which has properties and methods of its own. 
