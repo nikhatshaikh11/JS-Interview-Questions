@@ -52,7 +52,50 @@ A. To declare methods inside of objects in JS, we need to first create a propert
    obj1.changeName('Shaikh');
    
 # 6. What is scope and scope chain?
-A. 
+A. Scope is JS refers to the accessibility or visibility of variables i.e. which part of the prgram has access to which varibales.
+   The main benefit of scope is security. By making certai varibales accessible only in a certain area of the code, we can avoid unintended modifcations to the variables from other parts of the code.
+   Types of Scope:
+   There are three types of scope. The global scope, local scope also called function scope and the Block scope.
+   Global Scope:
+   A variable that's not inside of any function or block (a pair of curly braces) is inside the global scope. The varibales inside a global cope can be accessed from anywhere in the program.
+   for eg
+   var name = 'Nikhat'
+         
+         function printName(){
+            console.log(name)
+         }
+         
+         printName(); >>>prints Nikaht
+   
+   Local scope or function scope:
+   Variables declared inside a funciton have local scope. They can only be accessed from inside of the function. So they are not available for use outside of the function.
+   for eg:
+         var name = 'Nikhat'
+         
+         function printName(){
+                  var name = 'Nikhat'
+                  console.log(name)
+         }
+         
+         console.log(name) >>> reference error
+   
+   Block Scope:
+   ES6 introduced let and const variables. Unlike var, let and const can be scoped to the nearest pair of curly braces. That means they cant be accessed from outside the pair of curly braces.
+   for eg:
+            {
+                let name = 'Nikhat'
+                var surname = 'Shaikh'
+                const country = 'India'
+            }
+            
+            console.log(name) >>> reference error
+            console.log(surname) >>> no error as var has global/function scope, not block scope
+            console.log(country) >>> reference error
+            
+    Notes for me:
+         • Anything defined inside of a function (be it var, const or let): not accessbile outside of the function.
+         • Anything defined inside of the global scope (be it var, const or let): can be accessed from anywhere in the program
+         • let and const inside of a block: cannot be accessed outside of that block. var inside of a block, can be accessed outside of that block
 
 # 7. What's the output:
      const language = 'Brazilian';
