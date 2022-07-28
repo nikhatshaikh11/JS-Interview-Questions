@@ -138,9 +138,52 @@ A.   var array = [1, 2, 3, 4, 5, 6];
      array.slice(startIndex, endIndex); returns a chunk of array from the start index to the endIndex-1. so for eg if we do array.splice(2, 5), this will return the  part of the array from index 2 to index 4 i.e. [3, 4, 5] 
      
 # 9. Explain map(), reduce(), filter(), forEach methods in array.
-
+A.   map():
+         creates a new array. calls the given function for each element of the array
+         var array1 = [1, 2, 3, 4, 5]
+         var newArray = array1.map(el => {return el * 2});  // returns a new array with doubled values
+         
+     reduce():
+         takes two arguments and performs the given operation on the two of them returing only a single value at the end, thus called reduce.
+         var arr = [100, 40, 10];
+         var reducedResult = arr.reduce((el1,el2) => return el1 - el2);
+         //returns 40
+         
+    filter():
+         as the name suggests, this method filters throught the gven array and returns all array elements whihc satisfy the given condition
+         returns a new array containing all elements that satisfy the given condition
+         for eg
+         var arr = [1, 2, 4, 5, 10, 11, 15, 20];
+         var newArray = arr.filter(el => {return el >= 10});
+    
+    forEach():
+         this mthod is used to iterate over the array
+         for eg:
+         sum of all array elements
+         var arr = [1, 10, 20, 30];
+         var sum = 0;
+         arr.forEach(el => return sum += el);
+         
 
 # 10. Callback functions and its example. What is Callback Hell and how can it be avoided?
+A.    Callback Function:
+      A callback is a function passed as an argument to another function.
+      Where callbacks really shine are in asynchronous functions, where one function has to wait for another function (like waiting for a file to load).
+      A typical example is JavaScript setTimeout().
+         setTimeout(myFunction, 3000);
+
+         function myFunction() {
+           console.log('I am a callback function');
+         }
+      here, myFuncton is the callback function passed an a argumnt another function, the setTimeout function. 
+      And myFunction will be called after 3 seconds
+      
+      Callback hell and how to avoid it:
+      Callback hell refers to the situation where callbacks are nested within other callbacks several levels deep, potentially making it difficult to understand and maintain the code
+      There are multiple solutions to avoiding callback hell such as:
+      Split the callbacks into different functions
+      Use Promises  
+      Use Async await
 
 # 11. getters and setters in an object
 
@@ -181,6 +224,10 @@ A.   var array = [1, 2, 3, 4, 5, 6];
 # 29. Different types of events in JS
 
 # 30. What are synchronous and asynchronous functions
+      Asynchronous functions:
+         use the async keyword before any function declaration (including arrow funtion) to make it asynchronous
+         Asynchronous functions always return promises
+         It doesnt matter what you return...the returned value will always be a promise.
 
 # 31. What will be the output and why:
       a = 10;
