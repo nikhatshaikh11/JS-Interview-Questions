@@ -126,6 +126,14 @@ A.   var array = [1, 2, 3, 4, 5, 6];
       console.log(a);
       var a;
       What if we change the keywork to be let or const from var
+  A.  Output will be 10.
+      This is because of a default behaviour of JS called Hoisting.
+      While executing any JS code, the complier first runs through the code and brings all the variable and function declarations, not initialistion, ony declariotns, to the top of the scope. So in our example, although var a is declared after we're assigining it a value and loggin it to the console, JS engine will bring the declaration on line 3 to the top of the scope. Now that there is a varibale a declared at the top, then we assign it a value of 10 and then log it to the console, the output willbe 10.
+      
+      If we had used const or let to decalre the varibale a:
+      In case of const, it will clearly be a syntax error because const variables as a rule have to initialised at the time of declaration. 
+      In case of let...hoisting works slightly differenlty than the var declations. Let and const variables declarations are stored in memory called the Temporal Dead Zone.
+      -remaining
       
 # 32. What will be the output and why?
       let a = 3;
@@ -135,7 +143,9 @@ A.   var array = [1, 2, 3, 4, 5, 6];
       console.log(a == b);
       console.log(a === b);
       console.log(a === c);
-      
+A.    a == b: true as the == comparator only compares values nad not data types. here although a and b are of two different data types a is a primitive of type number and b is an object of the Number class..they have the same value. thus, true. 
+      a === b: false as the === comparator operator compares the value as well as data type. a and b both have the same value, but their data types are different. while a is a primitive data type of type number, b is an object.
+      a === c: true as a and c both are primitites, of type number and have the same value. so when the === comparator compares their value as well as their data type it finds them both to be the same. so it returns true.
       
 # 33. Change the html text to 'I am new text' using DOM
       <div id='text'>I am text</div>
