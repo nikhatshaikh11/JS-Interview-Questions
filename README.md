@@ -2,10 +2,14 @@
 making a repo of interview JS question-answers for myself
 
 # 1. Give a brief about JS.
-A. 
+A. Javascript, created by Brenden Eich in 1995, is one of the most widely used web development languages. It was originally created for the browsers to make dynamic web pages. However, now JS has become a lot more powerful because now it can be run on server and thus on any device which has the JS Engine installed making it a language of the FE as well as the BE.  
 
-#2. What is IIFE?
-A. 
+# 2. What is IIFE?
+A. IIFE stands for Immediately Invoked Function Expression. As the name suggest, IIFE is a function in Javascript that runs as soon as it is defined. Any IIFE, the epression has two majpr parts:
+The first part is an anonymous function i.e. a function without a name, ecnclosed inside of a pair of parenthesis. Whenever the JS engine sees the word 'funtion' it assumes that we're declaring a function and thus it expects a function name because by the syntax of declaring a function in JS, it has to have a name. And so without these first set of parenthesis, the compiler would throw an error. Thus we add this first set of paremthesis to let the compiler know that its not a function declaration but a function exprssion.
+The second set of parenthesis again make sense because in JS to invoke a function, we have to use parenthesis after it name..so that's what the second set of parethesis is doing..its invoking the function that we just declared.
+
+# What is the difference between a function declaration and a function expression?
 
 # 3. What is an Object is JS?
 A. JS has two types of data types, namely primitives and non-primitives. Primitive data types can hold a single value at a time. However, if we want to store multiple and more compelx data in a variable, we can use non-primitives, more commonly known as Objects. So Objects in JS are standalone entity which has properties and methods of its own. 
