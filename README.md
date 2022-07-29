@@ -82,11 +82,11 @@ A. Scope is JS refers to the accessibility or visibility of variables i.e. which
    Block Scope:
    ES6 introduced let and const variables. Unlike var, let and const can be scoped to the nearest pair of curly braces. That means they cant be accessed from outside the pair of curly braces.
    for eg:
-            {
-                let name = 'Nikhat'
-                var surname = 'Shaikh'
-                const country = 'India'
-            }
+                     {
+                         let name = 'Nikhat'
+                         var surname = 'Shaikh'
+                         const country = 'India'
+                     }
             
             console.log(name) >>> reference error
             console.log(surname) >>> no error as var has global/function scope, not block scope
@@ -96,6 +96,10 @@ A. Scope is JS refers to the accessibility or visibility of variables i.e. which
          • Anything defined inside of a function (be it var, const or let): not accessbile outside of the function.
          • Anything defined inside of the global scope (be it var, const or let): can be accessed from anywhere in the program
          • let and const inside of a block: cannot be accessed outside of that block. var inside of a block, can be accessed outside of that block
+         
+   # Scope chain
+     Whenever our code tries to access a variable, it starts searching from the varibales inside of the current scope. If in the current scope it doesnt find thee variables, it continues searching for them in the immediately following outer scope and then the next outer scope and so on until it finds the variable or reaches the global scope. THis is called a scope chain.
+         
 
 # 7. What's the output:
      const language = 'Brazilian';
