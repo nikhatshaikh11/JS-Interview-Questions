@@ -196,6 +196,7 @@ A.    Callback Function:
 # 13. Event loop in JS
 
 # 14. What are promises, give an example and explain the stages of promises in JS
+A.    
 
 # 15. Spread operator and Rest Operator
 
@@ -264,7 +265,7 @@ A.    a == b: true as the == comparator only compares values nad not data types.
       <button id='btn'>Click</button>
       
       
-
+# What is Prototype
      
  
 
