@@ -192,6 +192,7 @@ A.    Callback Function:
 # 11. getters and setters in an object
 
 # 12. Object Destructuring and Array Destructuring
+A.    Destructuring in a JS makes it possible to kind of unpack values from arrays or properties from  objetcs 
 
 # 13. Event loop in JS
 
