@@ -206,6 +206,7 @@ A.
 # 17. What is DOM?
 
 # 18. Async await
+A. async-await is syntactic sugar over JavaScript promises. async makes a function return a JavaScript Promise, and await makes a function wait for a JavaScript Promise.
 
 # 19. Hoisting
 
@@ -267,6 +268,14 @@ A.    a == b: true as the == comparator only compares values nad not data types.
       
       
 # What is Prototype
+
+#   What is the difference between Callbacks and JavaScript Promises?
+A.  A Callback is a function that is called inside another function. It may or may not be performed asynchronously. A Promise is an object which takes a callback and executes it asynchronously. 
+
+#  What is meant by synchronous and asynchronous code in JavaScript?
+A. The code is synchronous when it blocks further execution of the remaining code until it finishes the current one. In contrast, asynchronous code allows the program to be executed immediately. 
+
+
      
  
 
