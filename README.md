@@ -13,12 +13,13 @@ The second set of parenthesis again make sense because in JS to invoke a functio
 A. The main difference between a function declaraation and a function expression is that the function name can be omitted in case of function expression to create anonymous functions but not in case of declaration.
 We can use function declarations for eg in the global scope and make it available throughout the code. If we dont want that, if we for eg want to limit the availablity of the function, we can use function expresson.
 Another difference is that function declarations are hoisted while function expressions are not.
-so for eg: printName()
-function printName ( ) { }
+so for eg: 
+         printName()
+         function printName ( ) { }
 will not throw any error
 but
-printName()
-const printName = () => {}
+         printName()
+         const printName = () => {}
 will throw an error (printName is not a function in case of var, not defined in case of let and const)
 
 # 3. What is an Object is JS?
@@ -36,6 +37,15 @@ A.
    
 # 5. Create an object with a method inside of it.
 A. To declare methods inside of objects in JS, we need to first create a property with the same name as that of the method and then declare the method. For eg:
+      
+             var person = {
+                      name: 'Nikhat',
+                      id: 1,
+                      printName: function printName(){
+                          console.log(this.name);
+                      }        
+             }
+
       
       function obj(id, name) {
             this.id = id;
