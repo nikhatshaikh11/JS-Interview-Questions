@@ -198,43 +198,204 @@ A.    Callback Function:
       Split the callbacks into different functions
       Use Promises  
       Use Async await
-
-# 11. getters and setters in an object
+ 
 
 # 12. Object Destructuring and Array Destructuring
-A.    Destructuring in a JS makes it possible to kind of unpack values from arrays or properties from  objetcs 
+A.    Destructuring is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. That is, we can extract data from arrays and objects and assign them to variables.
+         (https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/)
+         let introduction = ["Hello", "I" , "am", "Sarah"];
+         let greeting = introduction[0];
+         let name = introduction[3];
+
+         console.log(greeting);//"Hello"
+         console.log(name);//"Sarah"
+         
+         Now:
+         let introduction = ["Hello", "I" , "am", "Sarah"];
+         let [greeting, pronoun] = introduction;
+
+         console.log(greeting);//"Hello"
+         console.log(pronoun);//"I"
+         
+         Objects destrcutring:
+         Earlier:
+         let person = {name: "Sarah", country: "Nigeria", job: "Developer"};
+
+         let name = person.name;
+         let country = person.country;
+         let job = person.job;
+
+         console.log(name);//"Sarah"
+         console.log(country);//"Nigeria"
+         console.log(job);//Developer"
+         
+         Now:
+         let person = {name: "Sarah", country: "Nigeria", job: "Developer"};
+
+         let {name, country, job} = person;
+
+         console.log(name);//"Sarah"
+         console.log(country);//"Nigeria"
+         console.log(job);//Developer"
+         
+         If we want to assign values of an object to a new variable instead of using the name of the property, we can do this:
+         let person = {name: "Sarah", country: "Nigeria", job: "Developer"};
+
+         let {name: foo, job: bar} = person;
+
+         console.log(foo);//"Sarah"
+         console.log(bar);//"Developer"
+         So the values extracted are passed to the new variables foo and bar.
+         
+         using Default values
+         let person = {name: "Sarah", country: "Nigeria", job: "Developer"};
+
+         let {name = "myName", friend = "Annie"} = person;
+
+         console.log(name);//"Sarah"
+         console.log(friend);//"Annie"
+         
+         
 
 # 13. Event loop in JS
+A.    https://www.javascripttutorial.net/javascript-event-loop/
+         Check YT too
 
 # 14. What are promises, give an example and explain the stages of promises in JS
-A.    
+A.    https://www.w3schools.com/js/js_promise.asp
 
 # 15. Spread operator and Rest Operator
+A.    Rest: allows to give indefinite numbers of arguments to functions (collects data)
+
+         let func = function (p1, p2, …p) {
+
+         console.log(p1, p2, p)
+
+         }
+
+         func(1, 2, 3, 4, 5) → 1 2 [3 4 5]
+         
+      Spread:
+
+      taking a grup of data and spreading (copying) elements from one variable to another
+
+         let arr = [1, 2, 3, 4, 5]
+
+         let arr2 = […arr, 6, 7] → **spreads** all elemenst of arr to arr2’s indexes from 0 to arr.length-1 index
+
+         let arr3 = [arr, 6, 7] → stores the arr on index 0 as an array
 
 # 16. Higher Order Functions in JS
+A.    In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well. A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
 
 # 17. What is DOM?
+A.    When a web page is loaded, the browser creates a Document Object Model of the page.
+
+      The HTML DOM model is constructed as a tree of Objects:
+      
+      The HTML DOM is a standard object model and programming interface for HTML. It defines:
+
+         The HTML elements as objects
+         The properties of all HTML elements
+         The methods to access all HTML elements
+         The events for all HTML elements
 
 # 18. Async await
 A. async-await is syntactic sugar over JavaScript promises. async makes a function return a JavaScript Promise, and await makes a function wait for a JavaScript Promise.
+   Eg:
+   
 
 # 19. Hoisting
+A.    Hoisting is the default behaviour of the JS engine whereby all variable and function declarations are moved to the top of the scope.
+      Eg:
+      cosole.log(a)
+      var a;
+      a = 10;
+      //logs undefined
 
-# 20. Explain the 'this' keyword with reference to functions
 
 # 21. Difference between arrow functions and regular functions
+      Syntax
+      this keyword
 
 # 22. What is temporal dead zone?
+A.    A temporal dead zone (TDZ) is the area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
+      The let and const variables are not accessible before they are initialized with some value, and the phase between the starting of the execution of block in which the let or const variable is declared till that variable is being initialized is called Temporal Dead Zone for the variable.
 
 # 23. Different types of loops in JS
+A.    for loop
+      for(let i = 0; i < 10; i++){
+      
+      }
+      
+      for/in
+      The JavaScript for in statement loops through the properties of an Object:
+      for (key in object) {
+           // code block to be executed
+      }
+      const person = {fname:"John", lname:"Doe", age:25};
 
-# 24. For of loop implementation
+         let text = "";
+         for (let x in person) {
+           text += person[x];
+         }
+         Each iteration returns a key (x)
+         The key is used to access the value of the key
+         The value of the key is person[x]
+      
+      
+      for/of
+      It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
+      const cars = ["BMW", "Volvo", "Mini"];
+
+         let text = "";
+         for (let x of cars) {
+            text += x + "<br>";
+         }
+      
+      while
+      while(i > 10){
+         
+         i--;
+      }
+      
+      do while
+      do{
+      
+         i--;
+      } while( i > 10)
+
 
 # 25. What are template literals?
+A.    Template Literals use back-ticks (``) rather than the quotes ("") to define a string:
+      so instead of :
+      let str = 'hello world;
+      we can do:
+      let str = `hello wolrd`
+      
+      benefits:
+      Template literals allows multiline strings:
+               let text =
+                  `The quick
+                  brown fox
+                  jumps over
+                  the lazy dog`;
+                  
+      Template literals allow variables in strings:
+         let firstName = "John";
+         let lastName = "Doe";
 
-# 26. var, let and const difference
+         let text = `Welcome ${firstName}, ${lastName}!`;
+         
+      Template literals allow expressions in strings:
+         let price = 10;
+         let VAT = 0.25;
+
+         let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
 
 # 27. What are timers? Explain setTimeOUt and setInterval
+A.    
 
 # 28. What are event listeners?
 
