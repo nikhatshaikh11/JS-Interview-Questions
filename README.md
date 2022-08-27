@@ -394,12 +394,45 @@ A.    Template Literals use back-ticks (``) rather than the quotes ("") to defin
          let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
 
 
-# 27. What are timers? Explain setTimeOUt and setInterval
-A.    
+# 27. What are timers? Explain setTimeOut and setInterval
+A.    In JavaScript, a timer is created to execute a task or any function at a particular time. Basically, the timer is used to delay the execution of the program or to execute the JavaScript code in a regular time interval. With the help of timer, we can delay the execution of the code.
+      setTimeout
+      The setTimeout() method calls a function after a number of milliseconds.
+      The setTimeout() is executed only once.
+      setTimeout( () => {
+         alert('this is setTimeout')
+      }, 3000)
+      Use the clearTimeout() method to prevent the function from starting.
+
+      If you need repeated executions, use setInterval() instead.
+      setInterval( () => {
+         element.innerHTML += "Hello";
+      }, 1000)
+
+      The setInterval() method calls a function at specified intervals (in milliseconds).
+
+      The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
+
+
 
 # 28. What are event listeners?
+A.    The addEventListener() method attaches an event handler to the specified element.
+      without overwriting existing event handlers.
+               element.addEventListener('click', () => {
+                  //do something
+               })
 
 # 29. Different types of events in JS
+A.    Events are just 'things' that happen in our html document.
+      and when these 'things' happen, we might wanna do something, perfomr some operation etc
+      there are different types of events in JS for eg:
+      onclick
+      onkeydown: Triggers when a key is pressed
+      onkeypress: Triggers when a key is pressed and released
+      onkeyup: Triggers when a key is released
+      onmouseup: Triggers when a mouse button is released
+      onsubmit: Triggers when a form is submitted
+
 
 # 30. What are synchronous and asynchronous functions
       Asynchronous functions:
@@ -438,7 +471,8 @@ A.    a == b: true as the == comparator only compares values nad not data types.
       <button id='btn'>Click</button>
       
       
-# What is Prototype
+#     What is Prototype
+A.    
 
 #   What is the difference between Callbacks and JavaScript Promises?
 A.  A Callback is a function that is called inside another function. It may or may not be performed asynchronously. A Promise is an object which takes a callback and executes it asynchronously. 
