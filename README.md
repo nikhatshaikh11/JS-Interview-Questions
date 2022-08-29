@@ -258,8 +258,8 @@ A.    Destructuring is a JavaScript expression that makes it possible to unpack 
          
 
 # 13. Event loop in JS
-A.    https://www.javascripttutorial.net/javascript-event-loop/
-         Check YT too
+A.    blog: https://www.javascripttutorial.net/javascript-event-loop/
+      YT: https://www.youtube.com/watch?v=8zKuNo4ay8E
 
 # 14. What are promises, give an example and explain the stages of promises in JS
 A.    https://www.w3schools.com/js/js_promise.asp
